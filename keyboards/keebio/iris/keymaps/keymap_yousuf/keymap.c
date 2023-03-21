@@ -33,7 +33,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(" %>% ");
                 return false;
             case QK_MACRO_3:
-                SEND_STRING("```\\{r}{KC_ENT}{KC_ENT}```{KC_UP}");
+                SEND_STRING("```{r}"SS_TAP(X_ENT)SS_TAP(X_ENT)"```"SS_TAP(X_UP));
                 return false;
         }
     }

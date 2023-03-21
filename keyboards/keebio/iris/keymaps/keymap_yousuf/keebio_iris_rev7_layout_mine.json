@@ -10,7 +10,13 @@
         ],
     [" %in% "],
     [" %>% "],
-    ["```\\{r}{KC_ENT}{KC_ENT}```{KC_UP}"]
+    [
+      "```{r}",
+            {"action": "tap","keycodes": ["ENT"]},
+            {"action": "tap","keycodes": ["ENT"]},
+      "```",
+            {"action": "tap","keycodes": ["UP"]}
+        ]
 
     ],
   "layout": "LAYOUT",
