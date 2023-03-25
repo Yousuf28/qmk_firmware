@@ -16,7 +16,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
-
+#define COMBO_COUNT 1
+/* #define NO_ACTION_MACRO */
+/* #define NO_ACTION_FUNCTION */
 // wiring of each half
 #define MATRIX_ROW_PINS { B1, F0, F5, B4, D7 }
 #define MATRIX_COL_PINS { F1, F4, B5, C7, D4, D6 }
