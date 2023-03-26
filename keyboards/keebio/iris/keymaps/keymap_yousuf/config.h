@@ -16,7 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
-#define COMBO_COUNT 3
+#define COMBO_COUNT 4
 /* #define NO_ACTION_MACRO */
 /* #define NO_ACTION_FUNCTION */
 // wiring of each half

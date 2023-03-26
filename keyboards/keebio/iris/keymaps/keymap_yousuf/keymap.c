@@ -56,11 +56,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
                                                                           KC_NO, KC_NO,
 
-                                                                           LGUI(LCTL(KC_LEFT)),KC_PAGE_DOWN,KC_PAGE_UP, LGUI(LCTL(KC_RIGHT)),KC_NO, LCTL(LALT(KC_DEL)),
+                                                                           LGUI(LCTL(KC_LEFT)),KC_PAGE_DOWN,KC_PAGE_UP, LGUI(LCTL(KC_RIGHT)),QK_MACRO_4, LCTL(LALT(KC_DEL)),
 
                  KC_NO, KC_NO, KC_NO,
 
-                                                                          KC_NO,  KC_NO, KC_NO)
+                                                                          KC_NO,  KC_NO, LALT(KC_X))
 
 	/* [3] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, */
     /*              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, */
@@ -89,6 +89,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case QK_MACRO_3:
                 SEND_STRING("```{r}"SS_TAP(X_ENT)SS_TAP(X_ENT)"```"SS_TAP(X_UP));
                 return false;
+            case QK_MACRO_4:
+                SEND_STRING(SS_TAP(X_SPC)SS_TAP(X_M)SS_TAP(X_X)SS_TAP(X_R));
+                return false;
         }
     }
 
@@ -99,8 +102,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM test_combo1[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM test_combo2[] = {KC_F, KC_J, COMBO_END};
 const uint16_t PROGMEM test_combo3[] = {KC_E, KC_I, COMBO_END};
+const uint16_t PROGMEM test_combo4[] = {KC_S, KC_L, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(test_combo1, KC_ESC),
     COMBO(test_combo2, OSM(MOD_LSFT)), // keycodes with modifiers are possible too!
-    COMBO(test_combo3, CW_TOGG)
+    COMBO(test_combo3, CW_TOGG),
+    COMBO(test_combo4, KC_UNDS)
 };
