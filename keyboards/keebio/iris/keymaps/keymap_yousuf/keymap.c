@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                                           QK_MACRO_3, QK_MACRO_0, QK_MACRO_1,QK_MACRO_2, KC_VOLD, KC_VOLU,
 
-                 BL_TOGG, BL_STEP, BL_UP, BL_DOWN, KC_NO, KC_NO,
+                 BL_TOGG, BL_STEP, BL_UP, BL_DOWN, QK_BOOTLOADER, KC_NO,
 
                                                                            KC_HOME, LCTL(KC_LEFT), LCTL(KC_RIGHT),KC_END,  KC_NO, QK_MACRO_1,
 
@@ -102,10 +102,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM test_combo1[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM test_combo2[] = {KC_F, KC_J, COMBO_END};
 const uint16_t PROGMEM test_combo3[] = {KC_E, KC_I, COMBO_END};
-const uint16_t PROGMEM test_combo4[] = {KC_S, KC_L, COMBO_END};
+/* const uint16_t PROGMEM test_combo4[] = {KC_F, KC_SPC, COMBO_END}; */
+/* const uint16_t PROGMEM test_combo5[] = {KC_TAB,KC_ENT, COMBO_END}; */
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(test_combo1, KC_ESC),
     COMBO(test_combo2, OSM(MOD_LSFT)), // keycodes with modifiers are possible too!
-    COMBO(test_combo3, CW_TOGG),
-    COMBO(test_combo4, KC_UNDS)
+    COMBO(test_combo3, CW_TOGG)
+    /* COMBO(test_combo4, KC_UNDS), */
+    /* COMBO(test_combo5, KC_A) */
 };
