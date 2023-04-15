@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [0] = LAYOUT(
   KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
-  KC_NO,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_NO,
+  LT(3,KC_NO),    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_NO,
   KC_ESC,   KC_A,    KC_S,    KC_D,    KC_F,    LT(2, KC_G),    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, RSFT_T(KC_QUOT),
   LGUI_T(KC_LEFT), KC_Z,    KC_X,    KC_C,    LT(1,KC_V),    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, RGUI_T(KC_RIGHT),
   KC_NO, KC_NO,   KC_NO, LALT_T(KC_DOWN), LCTL_T(KC_TAB),    LSFT_T(KC_BSPC),
@@ -68,9 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |Adjust| Ctrl | Alt  | GUI  |Lower |Space |Space |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
-[1] = LAYOUT(
-             KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,
-                                                        KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
+[1] = LAYOUT(KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,
 
 
            KC_NO, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,
@@ -117,10 +115,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                                            LGUI(LCTL(KC_LEFT)),KC_PAGE_DOWN,KC_PAGE_UP, LGUI(LCTL(KC_RIGHT)),QK_MACRO_0, LCTL(LALT(KC_DEL)),
 
-                 QK_BOOTLOADER, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS,
+                 KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS,
 
                                                                           KC_NO,  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
-)
+),
+
+
+[3] = LAYOUT(KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,
+
+             KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,QK_BOOTLOADER,
+
+
+
+                                                         KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,KC_F12,
+
+KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,
+                                                   KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,KC_F6,
+
+             KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,
+             KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,
+
+             KC_NO,KC_NO,KC_NO,KC_TRNS,KC_TRNS,KC_TRNS,
+
+             KC_NO,KC_TRNS,KC_TRNS,KC_NO,KC_NO,KC_NO
+             )
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
