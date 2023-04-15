@@ -34,3 +34,37 @@ QMK is developed and maintained by Jack Humbert of OLKB with contributions from 
 ## Official Website
 
 [qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
+
+
+##
+ 
+ command   
+ 
+ I have created directory
+ 
+ pwd:
+ 
+ /Users/yousuf/qmk_firmware/keyboards/keebio/nyquist/keymaps/yousuf_keymap
+ 
+ relative to qmk_firmware
+ 
+ keyboards/keebio/nyquist/keymaps/yousuf_keymap
+ 
+ and I have following files.
+
+
+- config.h
+- keymap.c
+- rules.mk
+
+
+
+`make keebio/nyquist/rev3:yousuf_keymap`
+
+this command create keebio_nyquist_rev3_yousuf_keymap.hex file in qmk_firmware directory.
+this file used for flash.
+
+
+`qmk c2json -km yousuf_keymap -kb keebio/nyquist/rev3 keyboards/keebio/nyquist/keymaps/yousuf_keymap/keymap.c >>nyquist_update_lesss.json`
+
+this command create json file from c file and I can see the map on qmk website
