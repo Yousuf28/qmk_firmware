@@ -74,12 +74,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            KC_NO, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,
                                                                           KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_NO,
 
-                 KC_TRNS, KC_1, KC_2, KC_3, KC_4, KC_5,
+                 KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5,
                                                                           KC_6, KC_7, KC_8, KC_9, KC_0, KC_TRNS,
 
-                 KC_NO, KC_GRV, KC_MINS, KC_UNDS, KC_EQL, KC_PLUS, // 4 left row
-                                                                          KC_BSLS, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_DEL,
-                  KC_NO, KC_NO, KC_NO,KC_NO, KC_NO, KC_TRNS,                KC_NO, KC_NO, KC_NO,KC_NO, KC_NO, KC_NO
+                 KC_NO, KC_MINS, KC_UNDS, KC_EQL, KC_PLUS,KC_BSLS, // 4 left row
+                                                                          KC_NO, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_DEL, KC_NO, KC_NO, KC_NO,KC_NO, KC_NO, KC_TRNS,                KC_NO, KC_NO, KC_NO,KC_NO, KC_NO, KC_NO
 ),
 
 /* Dvorak
@@ -105,11 +104,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                  BL_TOGG, BL_STEP, BL_UP, BL_DOWN, KC_NO, KC_NO,
 
-                                                                           KC_HOME, LCTL(KC_LEFT), LCTL(KC_RIGHT),KC_END,  KC_NO, QK_MACRO_2,
+                                                                           KC_HOME, LCTL(KC_LEFT), LCTL(KC_RIGHT),KC_END, QK_MACRO_1,QK_MACRO_3,
 
                  KC_TRNS, KC_NO,KC_MUTE, KC_VOLD, KC_VOLU, KC_NO,
 
-                                                                          KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, QK_MACRO_1,
+                                                                          KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, QK_MACRO_2,
 
                  RGB_TOG, RGB_MOD, RGB_VAI, RGB_VAD, RGB_SPI, RGB_SPD,
 
@@ -123,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [3] = LAYOUT(KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,
 
-             KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,QK_BOOTLOADER,
+             KC_NO,KC_NO,KC_NO,KC_NO,QK_BOOTLOADER,KC_NO,
 
 
 
