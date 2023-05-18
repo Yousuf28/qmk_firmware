@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                                            KC_HOME, LCTL(KC_LEFT), LCTL(KC_RIGHT),KC_END, QK_MACRO_1,QK_MACRO_3,
 
-                 KC_TRNS, KC_NO,KC_MUTE, KC_VOLD, KC_VOLU, KC_NO,
+                 KC_TRNS, LGUI_T(KC_NO),KC_MUTE, KC_VOLD, KC_VOLU, KC_NO,
 
                                                                           KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, QK_MACRO_2,
 
