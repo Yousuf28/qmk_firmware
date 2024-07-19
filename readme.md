@@ -63,7 +63,13 @@ QMK is developed and maintained by Jack Humbert of OLKB with contributions from 
 
 this command create keebio_nyquist_rev3_yousuf_keymap.hex file in qmk_firmware directory.
 this file used for flash.
-
+- connect left keyboad to laptop with cable
+- open qmktool software
+- open hex file
+- press reset button under keyboard
+- flash button will appear on qmktool software.
+- hit flash button
+- do same for right keyboard
 
 `qmk c2json -km yousuf_keymap -kb keebio/nyquist/rev3 keyboards/keebio/nyquist/keymaps/yousuf_keymap/keymap.c >>nyquist_update_lesss.json`
 
