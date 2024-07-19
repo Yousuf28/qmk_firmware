@@ -48,25 +48,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                           LGUI(LCTL(KC_LEFT)),LGUI(LCTL(KC_RIGHT)), LALT(KC_F4), KC_NO, KC_NO,LGUI(KC_Q),
 
                  BL_TOGG, BL_STEP, BL_UP, BL_DOWN, QK_BOOTLOADER, KC_NO,
-
                                                                            /* KC_HOME, KC_END, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, */
-                                                                        KC_MS_L, KC_MS_D,KC_MS_U,KC_MS_R, KC_NO,KC_NO,
-
+                                                                         KC_MS_L, KC_MS_D,KC_MS_U,KC_MS_R, KC_HOME,KC_END,
                  KC_NO, LGUI_T(KC_NO),KC_MUTE, KC_VOLD, KC_VOLU, KC_NO,
-
                                                                           KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, QK_MACRO_2,
-
-
             RGB_TOG, RGB_MOD, RGB_VAI, RGB_VAD, RGB_SPI, RGB_SPD,
-
-
                                                                           KC_NO, KC_INS,
-
                                                                            /* LGUI(LCTL(KC_LEFT)),LGUI(LCTL(KC_RIGHT)), LGUI(KC_LEFT),LGUI(KC_RIGHT), QK_MACRO_0, LCTL(LALT(KC_DEL)), */
-                                                                           KC_BTN1,KC_WH_D,KC_WH_U,KC_BTN2, QK_MACRO_0, LCTL(LALT(KC_DEL)),
-
+                                                                           KC_BTN1,KC_WH_D,KC_WH_U,KC_BTN2, QK_MACRO_0, QK_MACRO_3,
                  KC_TRNS, KC_TRNS, KC_TRNS,
-
                                                                           KC_TRNS,  KC_TRNS, KC_TRNS)
 
 	/* [3] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, */
@@ -87,14 +77,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case QK_MACRO_0:
                 SEND_STRING(" <- ");
                 return false;
-            case QK_MACRO_1:
-                SEND_STRING(" %in% ");
-                return false;
+            /* case QK_MACRO_1: */
+            /*     SEND_STRING(" %in% "); */
+            /*     return false; */
             case QK_MACRO_2:
                 SEND_STRING(" |> ");
                 return false;
             case QK_MACRO_3:
-                SEND_STRING("```{r}"SS_TAP(X_ENT)SS_TAP(X_ENT)"```"SS_TAP(X_UP));
+                SEND_STRING(" %>% ");
+                /* SEND_STRING("```{r}"SS_TAP(X_ENT)SS_TAP(X_ENT)"```"SS_TAP(X_UP)); */
                 return false;
         }
     }
