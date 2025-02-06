@@ -103,9 +103,13 @@ single line command:
 
 `qmk c2json -km yousuf_keymap -kb keebio/nyquist/rev3 keyboards/keebio/nyquist/keymaps/yousuf_keymap/keymap.c >>nyquist_update_lesss.json`
 
-## Iris2 current map
+## Iris2 current map  
+layer 0  
+
 ![layer 0](iris2_screenshot/layer0.png)  
 
+layer 1  
 ![layer 1](iris2_screenshot/layer1.png)  
 
+layer 2  
 ![layer 2](iris2_screenshot/layer2.png)  
