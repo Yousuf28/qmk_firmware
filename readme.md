@@ -50,7 +50,7 @@ QMK is developed and maintained by Jack Humbert of OLKB with contributions from 
  
  keyboards/keebio/nyquist/keymaps/yousuf_keymap
  
- and I have following files.
+ and I have following files.(for change only this file for nyquist)
 
 
 - config.h
@@ -70,6 +70,14 @@ this file used for flash.
 - flash button will appear on qmktool software.
 - hit flash button
 - do same for right keyboard
+
+## to make change in iris, change this file
+qmk_firmware/keyboards/keebio/iris/keymaps/keymap_yousuf
+
+- config.h
+- keymap.c
+- rules.mk
+
 
 `qmk c2json -km yousuf_keymap -kb keebio/nyquist/rev3 keyboards/keebio/nyquist/keymaps/yousuf_keymap/keymap.c >>nyquist_update_lesss.json`
 
